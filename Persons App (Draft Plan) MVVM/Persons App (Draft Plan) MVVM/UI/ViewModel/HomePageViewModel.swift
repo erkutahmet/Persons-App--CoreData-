@@ -10,15 +10,15 @@ import RxSwift
 
 class HomePageViewModel {
     let pRepo = PersonsDaoRepository()
-    var personsList = BehaviorSubject<[Persons]>(value: [Persons]())
+    var personsList = BehaviorSubject<[PersonsModel]>(value: [PersonsModel]())
     
     init() {
         pRepo.personsList = self.personsList
         uploadPersons()
     }
     
-    func delete(person_id: Int) {
-        pRepo.delete(person_id: person_id)
+    func delete(person: PersonsModel) {
+        pRepo.delete(person: person)
     }
     
     func search(searchText: String) {

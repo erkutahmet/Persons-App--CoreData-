@@ -26,6 +26,7 @@
 		DCA232B72AE871AF000EAF2F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DCA232B62AE871AF000EAF2F /* RxCocoa */; };
 		DCA232B92AE871AF000EAF2F /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DCA232B82AE871AF000EAF2F /* RxCocoa-Dynamic */; };
 		DCA232BB2AE871AF000EAF2F /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = DCA232BA2AE871AF000EAF2F /* RxRelay */; };
+		DCA232C12AE882F2000EAF2F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCA232BF2AE882F2000EAF2F /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		DCA232AB2AE870E0000EAF2F /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		DCA232AD2AE870EB000EAF2F /* PersonRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegisterViewModel.swift; sourceTree = "<group>"; };
 		DCA232AF2AE870F0000EAF2F /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
+		DCA232C02AE882F2000EAF2F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				DCA2328F2AE86FD2000EAF2F /* Assets.xcassets */,
 				DCA232912AE86FD2000EAF2F /* LaunchScreen.storyboard */,
 				DCA232942AE86FD2000EAF2F /* Info.plist */,
+				DCA232BF2AE882F2000EAF2F /* Model.xcdatamodeld */,
 			);
 			path = "Persons App (Draft Plan) MVVM";
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				DCA232A22AE87061000EAF2F /* Persons.swift in Sources */,
 				DCA232892AE86FD1000EAF2F /* SceneDelegate.swift in Sources */,
 				DCA232A42AE87071000EAF2F /* PersonsDaoRepository.swift in Sources */,
+				DCA232C12AE882F2000EAF2F /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +514,19 @@
 			productName = RxRelay;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		DCA232BF2AE882F2000EAF2F /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DCA232C02AE882F2000EAF2F /* Model.xcdatamodel */,
+			);
+			currentVersion = DCA232C02AE882F2000EAF2F /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DCA2327B2AE86FD1000EAF2F /* Project object */;
 }

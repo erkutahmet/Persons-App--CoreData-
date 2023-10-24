@@ -12,7 +12,7 @@ class PersonDetail: UIViewController {
     @IBOutlet weak var personNameTextField: UITextField!
     @IBOutlet weak var personPhoneTextField: UITextField!
     
-    var person:Persons?
+    var person:PersonsModel?
     
     let personDetailVM = PersonDetailViewModel()
 
@@ -36,9 +36,9 @@ class PersonDetail: UIViewController {
             if person_name != String() && person_phone != String() {
                 let pName = personName.trimmingCharacters(in: .whitespaces)
                 let pPhone = personPhone.trimmingCharacters(in: .whitespaces)
-                personDetailVM.update(person_id: p.person_id!,
-                                                  person_name: pName,
-                                                  person_phone: pPhone)
+                personDetailVM.update(person: p,
+                                      person_name: pName,
+                                      person_phone: pPhone)
                 navigationController?.popToRootViewController(animated: true)
             } else {
                 let alertController = UIAlertController(title: "Error", message: "Please check fields!", preferredStyle: .alert)

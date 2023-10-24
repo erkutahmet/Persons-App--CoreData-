@@ -12,7 +12,7 @@ class HomePage: UIViewController {
 
     @IBOutlet weak var personSearchBar: UISearchBar!
     @IBOutlet weak var personsTableView: UITableView!
-    var personsList = [Persons]()
+    var personsList = [PersonsModel]()
     
     let homePageVM = HomePageViewModel()
     
@@ -35,9 +35,13 @@ class HomePage: UIViewController {
         })
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        homePageVM.uploadPersons()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
-            if let data = sender as? Persons {
+            if let data = sender as? PersonsModel {
                 let toVC = segue.destination as! PersonDetail
                 toVC.person = data
             }
@@ -78,7 +82,7 @@ extension HomePage: UITableViewDelegate, UITableViewDataSource {
             alert.addAction(cancelAction)
             
             let okayAction = UIAlertAction(title: "Okay", style: .destructive) { action in
-                self.homePageVM.delete(person_id: person.person_id!)
+                self.homePageVM.delete(person: person)
             }
             alert.addAction(okayAction)
             

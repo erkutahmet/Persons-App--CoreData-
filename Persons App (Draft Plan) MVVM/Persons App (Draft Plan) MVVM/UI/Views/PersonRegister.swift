@@ -28,7 +28,7 @@ class PersonRegister: UIViewController {
                 let pName = personName.trimmingCharacters(in: .whitespaces)
                 let pPhone = personPhone.trimmingCharacters(in: .whitespaces)
                 personRegisterVM.save(person_name: pName,
-                                                person_phone: pPhone)
+                                      person_phone: pPhone)
                 navigationController?.popToRootViewController(animated: true)
             } else {
                 let alertController = UIAlertController(title: "Error", message: "Please check fields!", preferredStyle: .alert)
